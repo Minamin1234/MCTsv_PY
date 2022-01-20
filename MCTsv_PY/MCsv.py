@@ -18,3 +18,6 @@ class MCsv(object):
 
     def GetTextFromCSVFile(self,path:str) -> str:
         return
+
+    def ToTSV(self,CSVtext:str) -> str:
+        return
