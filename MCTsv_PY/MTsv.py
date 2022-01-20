@@ -1,3 +1,6 @@
+from typing import NoReturn as void
+from typing import List
+
 class MTsv(object):
     ENCODING:str = "UTF-8"
 
