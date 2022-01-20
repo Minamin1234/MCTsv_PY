@@ -16,8 +16,5 @@ class MCsv(object):
     def RemakeCSV(self,words:str): -> str:
         return
 
-
-
-
-
-
+    def GetTextFromCSVFile(self,path:str) -> str:
+        return
