@@ -8,7 +8,13 @@ class MTsv(object):
         return
 
     def ToTSVFromList(self,words:List[List[str]]) -> str:
-        return
+        result:str = ""
+        for cword in words:
+            for rword in cword:
+                result += rword + "\t"
+            result = result.rstrip("\t")
+            result += "\n"
+        return result
 
     def ToListFromTSV(self,words:str) -> List[List[str]]:
         return
