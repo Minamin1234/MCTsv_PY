@@ -24,7 +24,6 @@
   <ItemGroup>
     <Compile Include="main.py" />
     <Compile Include="MCsv.py" />
-    <Compile Include="MTsv.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="LIST.csv" />
