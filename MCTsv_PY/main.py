@@ -18,3 +18,6 @@ print(newdata)
 
 newdata = Csvdev.RemakeCSV(csvdata)
 print(newdata)
+
+newdata = Csvdev.ToTSV(csvdata)
+print(newdata)

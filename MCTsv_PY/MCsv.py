@@ -74,7 +74,20 @@ class MCsv(object):
         return result
 
     def GetTextFromCSVFile(self,path:str) -> str:
-        return
+        result:str = ""
+        try:
+            f = open(path,"r")
+            result = f.read()
+        except FileNotFoundError:
+            return ""
+
+        return result
 
     def ToTSV(self,CSVtext:str) -> str:
-        return
+        result:str = ""
+        for w in CSVtext:
+            if w == ",":
+                result += "\t"
+                continue
+            result += w
+        return result
