@@ -33,10 +33,11 @@ class MCsv(object):
             result[clevel][rlevel] += w
         return result
 
-    def RemakeCSV(self,words:str) -> str:
+    def RemakeCSV(self,words:str,textalign="right") -> str:
         Counts:List[int] = []
         Cnt:int = 0
         result:str = ""
+
         for w in words:
             if w == "," or w == "\n":
                 Counts.append(Cnt)
@@ -48,10 +49,22 @@ class MCsv(object):
 
         Idx:int = 0
         Frag:bool = False
+        if textalign == "left":
+            for w in words:
+                if w == "," or w == "\n":
+                    result += " " * (MAX - Counts[Idx])
+                    result += w
+                    Idx += 1
+                    continue 
+                result += w
+            return result
+
         for w in words:
             if w == "," or w == "\n":
                 Frag = False
                 Idx += 1
+                result += w
+                continue
 
             if Frag == False:
                 Frag = True
